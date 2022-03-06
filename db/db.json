@@ -1,13 +1,19 @@
-[
+{
+  "notes": [
     {
-        "title":"Test Title",
-        "text":"Test text"
+      "title": "FIRST NOTE",
+      "text": "yesss",
+      "id": "0"
     },
-
     {
-        "title":"CezzieNYC",
-        "text":"Second test"
+      "title": "another one ",
+      "text": "yup",
+      "id": "1"
+    },
+    {
+      "title": "loading",
+      "text": "yup",
+      "id": "2"
     }
-
-
-]
+  ]
+}
