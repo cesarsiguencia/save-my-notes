@@ -1,5 +1,7 @@
-// const router = require('express').Router()
+const router = require('express').Router()
 
-// router.use(require('./notesRoute'))
+router.use(require('./notesRoute'))
 
-// module.exports = router;
+console.log("indexAPI going through")
+
+module.exports = router;

@@ -1,5 +1,5 @@
-let noteTitle;
-let noteText;
+let noteTitle; 
+let noteText; 
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
@@ -31,7 +31,16 @@ const getNotes = () =>
     headers: {
       'Content-Type': 'application/json',
     },
-  });
+  }).then(response => {
+    if(!response.ok){
+      return alert('Error' + response.statusText)
+    }
+    return response.json();
+
+  }).then(newNotesData => {
+    console.log(newNotesData);
+    renderNoteList(newNotesData)
+  })
 
 const saveNote = (note) =>
   fetch('/api/notes', {
@@ -40,14 +49,26 @@ const saveNote = (note) =>
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
+
+  }).then(response => {
+    if(response.ok){
+      return response.json();
+    }
+    alert('Error: ' + response.statusText);
+  }).then(postResponse => {
+    console.log(postResponse);
+    alert('You have added a note!')
+    console.log(note)
   });
 
-const deleteNote = (id) =>
+
+  const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
     },
+
   });
 
 const renderActiveNote = () => {
