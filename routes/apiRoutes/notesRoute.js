@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { newNote } = require('../../lib/notes')
+const { newNote, findById, deleteNote } = require('../../lib/notes')
 
 const { notes } = require('../../db/db.json');
 
@@ -19,6 +19,20 @@ router.get('/notes', (req, res) => {
     console.log("notesRoute working")
     res.json(notesArray)
 })
+
+router.delete('/notes/:id',(req, res) => {
+    const result = findById(req.params.id, notes);
+    console.log(result)
+    if(result){
+        res.json(result);
+    } else {
+        console.log('HERE, 404 LINE')
+        res.sendStatus(404);
+    }
+    deleteNote(req.params.id , notes)
+})
+
+
 
 router.post('/notes', (req,res) => {
     req.body.id = notes.length.toString();
