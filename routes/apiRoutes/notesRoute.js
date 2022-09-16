@@ -12,11 +12,11 @@ router.get('/notes', (req, res) => {
     //     console.log("TEST 1")
     //     notes = getNotes(req.query, notes)
     // }
-    console.log(notes, "notes should be here from notesRoute")
+    // console.log(notes, "notes should be here from notesRoute")
     let notesArray = notes
-    console.log(req.query, "this tooo");
-    console.log(notesArray, "notes should bee heere")
-    console.log("notesRoute working")
+    // console.log(req.query, "this tooo");
+    // console.log(notesArray, "notes should bee heere")
+    // console.log("notesRoute working")
     res.json(notesArray)
 })
 

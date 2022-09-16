@@ -52,7 +52,7 @@ const getNotes = (newNoteData = {}) => {
 
   }).then(newNotesData => {
     console.log(newNotesData);
-    console.log("newnotesdata")
+    // console.log("newnotesdata")
     renderNoteList(newNotesData);
   })
   
@@ -156,7 +156,7 @@ const handleRenderSaveBtn = () => {
 
 // Render the list of note titles
 const renderNoteList = async (notes) => {
-  console.log(notes, "THESE ARE NOTES FROM 158 INDEX")
+  // console.log(notes, "THESE ARE NOTES FROM 158 INDEX")
   let jsonNotes = notes
   if (window.location.pathname === '/notes') {
     noteList.forEach((el) => (el.innerHTML = ''));
