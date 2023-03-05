@@ -1,4 +1,4 @@
-# Welcome to Save-My-Notes! 
+# Save My Notes! 
 
 This is an Express enabled note taking app for the user to title and save notes. The user is able to upload as many notes as they'd like and delete them. A simple and easy design to use!
 
