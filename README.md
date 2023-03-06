@@ -9,7 +9,7 @@ To run, use the heroku link below or download the application, run 'npm i' in th
 ### Website Link
 Github URL: https://github.com/cesarsiguencia/save-my-notes
 
-Heroku Link: https://frozen-refuge-80298.herokuapp.com
+Heroku Link: https://save-my-notes-by-cs.herokuapp.com/
 
 App loaded local drive: http://localhost:3002
 
