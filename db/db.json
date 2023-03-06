@@ -1,24 +1,3 @@
 {
-  "notes": [
-    {
-      "title": "My first Note",
-      "text": "Created at 6:05PM\nHow's it going?",
-      "id": "0"
-    },
-    {
-      "title": "Eight note",
-      "text": "This one has an id",
-      "id": "2"
-    },
-    {
-      "title": "tenth note",
-      "text": "id of 10 hopefully",
-      "id": "3"
-    },
-    {
-      "title": "testing 13",
-      "text": "what id is this? 4?",
-      "id": "4"
-    }
-  ]
+  "notes": []
 }

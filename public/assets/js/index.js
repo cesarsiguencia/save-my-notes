@@ -4,6 +4,8 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
+const { notes } = require('../../../db/db.json');
+
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
@@ -105,10 +107,18 @@ const renderActiveNote = () => {
 };
 
 const handleNoteSave = () => {
+
+
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
   };
+
+  // if(notes.length = 0){
+  //   newNote.id = 1
+  // }
+
+  console.log(newNote)
   saveNote(newNote).then(() => {
     getAndRenderNotes();
     renderActiveNote();

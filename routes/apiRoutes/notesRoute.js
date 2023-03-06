@@ -21,6 +21,7 @@ router.get('/notes', (req, res) => {
 })
 
 router.delete('/notes/:id',(req, res) => {
+    console.log(req.params.id)
     const result = findById(req.params.id, notes);
     console.log(result)
     if(result){
@@ -35,7 +36,36 @@ router.delete('/notes/:id',(req, res) => {
 
 
 router.post('/notes', (req,res) => {
-    req.body.id = notes.length.toString();
+    console.log(req.body)
+
+    console.log(req.body.title)
+
+    console.log (notes.length)
+
+    if(notes.length == 0){
+        console.log("the array does not exist")
+        req.body.id = 1
+    } else {
+        console.log("DONT DO THROUGH HERE")
+        var lastIndexId = notes[notes.length - 1].id
+        //change to numberic value!
+        lastIndexId = parseInt(lastIndexId)
+    
+        req.body.id = lastIndexId + 1
+        console.log('FIRST', req.body.id)
+    
+       
+
+
+
+ 
+    
+    
+    }
+    
+    req.body.id = req.body.id.toString()
+
+
 
     const addNote = newNote(req.body, notes)
     console.log(addNote)
