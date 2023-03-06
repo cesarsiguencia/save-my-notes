@@ -1,5 +1,7 @@
 const router = require('express').Router()
 
-router.use(require('./notesRoute'))
+const noteRoutes = require('./notesRoute')
+
+router.use('/notes', noteRoutes)
 
 module.exports = router;
