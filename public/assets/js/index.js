@@ -4,7 +4,7 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
-if (window.location.pathname === '/notes') {
+if (window.location.pathname === '/') {
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
   saveNoteBtn = document.querySelector('.save-note');
@@ -138,7 +138,7 @@ const handleRenderSaveBtn = () => {
 
 const renderNoteList = async (notes) => {
   let jsonNotes = notes
-  if (window.location.pathname === '/notes') {
+  if (window.location.pathname === '/') {
     noteList.forEach((el) => (el.innerHTML = ''));
   }
 
@@ -182,14 +182,14 @@ const renderNoteList = async (notes) => {
     noteListItems.push(li);
   });
 
-  if (window.location.pathname === '/notes') {
+  if (window.location.pathname === '/') {
     noteListItems.forEach((note) => noteList[0].append(note));
   }
 };
 
 const getAndRenderNotes = () => getNotes();
 
-if (window.location.pathname === '/notes') {
+if (window.location.pathname === '/') {
   saveNoteBtn.addEventListener('click', handleNoteSave);
   newNoteBtn.addEventListener('click', handleNewNoteView);
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
