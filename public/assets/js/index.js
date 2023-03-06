@@ -1,10 +1,8 @@
-let noteTitle; 
-let noteText; 
+let noteTitle;
+let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
-
-const { notes } = require('../../../db/db.json');
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
@@ -37,29 +35,22 @@ const getNotes = (newNoteData = {}) => {
   console.log(noteUrl);
   console.log(newNoteData)
 
-  // , {
-  //   method: 'GET',
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //   },
-  // }
 
 
   fetch(noteUrl)
     .then(response => {
-    if(!response.ok){
-      return alert('Error' + response.statusText)
-    }
-    return response.json();
+      if (!response.ok) {
+        return alert('Error' + response.statusText)
+      }
+      return response.json();
 
-  }).then(newNotesData => {
-    console.log(newNotesData);
-    // console.log("newnotesdata")
-    renderNoteList(newNotesData);
-  })
-  
-  }
-  
+    }).then(newNotesData => {
+      console.log(newNotesData);
+      // console.log("newnotesdata")
+      renderNoteList(newNotesData);
+    })
+}
+
 
 const saveNote = (note) =>
   fetch('/api/notes', {
@@ -70,7 +61,7 @@ const saveNote = (note) =>
     body: JSON.stringify(note),
 
   }).then(response => {
-    if(response.ok){
+    if (response.ok) {
       return response.json();
     }
     alert('Error: ' + response.statusText);
@@ -88,7 +79,7 @@ const deleteNote = (id) =>
       'Content-Type': 'application/json',
     },
 
-});
+  });
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
@@ -114,9 +105,6 @@ const handleNoteSave = () => {
     text: noteText.value,
   };
 
-  // if(notes.length = 0){
-  //   newNote.id = 1
-  // }
 
   console.log(newNote)
   saveNote(newNote).then(() => {
