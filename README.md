@@ -6,12 +6,21 @@ Technologies used in the application are Express and the writeFile module provid
 
 To run, use the heroku link below or download the application, run 'npm i' in the command line, then run 'npm start' and load the browser to http://localhost:3002
 
-### Website Link
-Github URL: https://github.com/cesarsiguencia/save-my-notes
+### List of API routes built
+
+- GET (ALL notes saved in array)
+- POST (ONE note)
+- DELETE (One note)
+
+### Application Link/Installation
 
 Heroku Link: https://save-my-notes-by-cs.herokuapp.com/
 
-App loaded local drive: http://localhost:3002
+OR if downloaded locally:
+
+1. Git clone or download the application and load on VSCode.
+2. Run 'npm install' in the Command Line for all necessary packages to install.
+3. Run 'npm start' and navigate to browser to http://localhost:3002
 
 
 ### Screenshots
