@@ -14,6 +14,14 @@ To run, use the Render link below or download the application, run 'npm i' in th
 
 ### Application Link/Installation
 
+This render link is a Free Web Service. As stated on Render's website: 
+
+*"Web Services on the free instance type are automatically spun down after 15 minutes of inactivity. When a new request for a free service comes in, Render spins it up again so it can process the request.
+
+This will cause a delay in the response of the first request after a period of inactivity while the instance spins up."*
+
+**PLEASE BE PATIENT WHEN LOADING THE LINK, IT SHOULD TAKE LESS THAN A MINUTE.**
+
 Link: https://save-my-notes-by-cs.onrender.com/
 
 OR if downloaded locally:
