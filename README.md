@@ -4,7 +4,7 @@ This is an Express enabled note taking app for the user to title and save their 
 
 Technologies used in the application are Express and the writeFile module provided by NodeJS.
 
-To run, use the heroku link below or download the application, run 'npm i' in the command line, then run 'npm start' and load the browser to http://localhost:3002
+To run, use the Render link below or download the application, run 'npm i' in the command line, then run 'npm start' and load the browser to http://localhost:3002
 
 ### List of API routes built
 
@@ -14,7 +14,7 @@ To run, use the heroku link below or download the application, run 'npm i' in th
 
 ### Application Link/Installation
 
-Heroku Link: https://save-my-notes-by-cs.herokuapp.com/
+Link: https://save-my-notes-by-cs.onrender.com/
 
 OR if downloaded locally:
 
